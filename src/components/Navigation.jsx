@@ -9,6 +9,7 @@ const Navigation = () => {
       direction="row"
       gap={6}
       height="4rem"
+      sx={{ position: 'absolute', top: '0' }}
     >
       <Typography variant="h6">Work</Typography>
       <Typography variant="h6">Resume</Typography>
