@@ -3,6 +3,7 @@ import { Stack } from '@mui/material';
 
 import UserDescription from '../components/UserDescription';
 import CustomButton from '../components/UI/CustomButton';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -16,29 +17,36 @@ const Home = () => {
       <Stack direction="column" gap={1}>
         <UserDescription />
         <Stack direction="row" gap={2} marginTop="1rem">
-          <CustomButton
-            sx={{
-              backgroundColor: 'darkgreen',
-              color: 'white',
-              '&:hover': {
-                backgroundColor: 'green',
-              },
-            }}
+          <Link
+            to="/contact"
+            style={{ textDecoration: 'none', color: 'inherit' }}
           >
-            Contact me
-          </CustomButton>
-          <CustomButton
-            sx={{
-              backgroundColor: 'inherit',
-              border: '1px solid darkgreen',
-              color: 'black',
-              '&:hover': {
-                backgroundColor: 'rgb(164, 199, 157)',
-              },
-            }}
-          >
-            Check my work
-          </CustomButton>
+            <CustomButton
+              sx={{
+                backgroundColor: 'darkgreen',
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: 'green',
+                },
+              }}
+            >
+              Contact me
+            </CustomButton>
+          </Link>
+          <Link to="/work" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <CustomButton
+              sx={{
+                backgroundColor: 'inherit',
+                border: '1px solid darkgreen',
+                color: 'black',
+                '&:hover': {
+                  backgroundColor: 'rgb(164, 199, 157)',
+                },
+              }}
+            >
+              Check my work
+            </CustomButton>
+          </Link>
         </Stack>
       </Stack>
     </Stack>

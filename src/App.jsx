@@ -1,3 +1,5 @@
+import { Routes, Route, Navigate } from 'react-router-dom';
+
 import { Container } from '@mui/material';
 
 import Navigation from './components/Navigation';
@@ -17,7 +19,10 @@ function App() {
       }}
     >
       <Navigation />
-      <Home />
+      <Routes>
+        <Route path="/" exact element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
     </Container>
   );
 }

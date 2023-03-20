@@ -1,0 +1,11 @@
+.link {
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  /* padding: 0.5rem 1rem;  */
+}
+
+/* .link:hover {
+  color: white;
+  background-color: darkgreen;
+} */
