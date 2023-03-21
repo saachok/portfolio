@@ -15,7 +15,7 @@ function App() {
         alignItems: 'center',
         justifyContent: 'center',
         height: '100vh',
-        backgroundColor: 'rgb(210, 255, 200)',
+        backgroundColor: 'rgb(222, 234, 248)',
       }}
     >
       <Navigation />

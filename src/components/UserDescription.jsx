@@ -3,7 +3,7 @@ import { Stack, Typography } from '@mui/material';
 
 const UserDescription = () => {
   const bgStyles = {
-    backgroundColor: 'darkgreen',
+    backgroundColor: 'rgb(132,168,192)',
     color: 'white',
     padding: '0 6px 3px 1px',
   };

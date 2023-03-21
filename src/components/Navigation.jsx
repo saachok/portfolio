@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Stack, Typography } from '@mui/material';
-import './Navigation.css';
+import './Navigation.scss';
 
 const Navigation = () => {
   return (

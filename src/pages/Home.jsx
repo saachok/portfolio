@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <Stack direction="row" justifyContent="center" alignItems="center" gap={4}>
       <img
-        src="./photo-1.jpg"
+        src="./photo-2.jpg"
         width="350px"
         alt="user"
         style={{ borderRadius: '4px' }}
@@ -23,10 +23,10 @@ const Home = () => {
           >
             <CustomButton
               sx={{
-                backgroundColor: 'darkgreen',
+                backgroundColor: 'rgb(132,168,192)',
                 color: 'white',
                 '&:hover': {
-                  backgroundColor: 'green',
+                  backgroundColor: 'rgb(118, 152, 176)',
                 },
               }}
             >
@@ -40,7 +40,7 @@ const Home = () => {
                 border: '1px solid darkgreen',
                 color: 'black',
                 '&:hover': {
-                  backgroundColor: 'rgb(164, 199, 157)',
+                  backgroundColor: 'rgb(193, 207, 220)',
                 },
               }}
             >
