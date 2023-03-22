@@ -10,7 +10,7 @@ const UserDescription = () => {
   return (
     <Stack direction="column" gap={1} width="650px">
       <Typography variant="h3" fontWeight="bold">
-        Hi, I'm Andrii and I'm <br />a{' '}
+        Hi, I'm Andrii and I'm <br />a
         <em style={bgStyles}>Frontend Web Developer</em>.
       </Typography>
       <Stack direction="column" gap="inherit" width="560px">
