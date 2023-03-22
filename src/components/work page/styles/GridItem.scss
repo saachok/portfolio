@@ -1,0 +1,9 @@
+.project-cover {
+  width: 288px;
+  border-radius: 6px;
+
+  &:hover {
+    transition: scale 0.5s;
+    scale: 1.05;
+  }
+}
