@@ -1,6 +1,7 @@
 import React from 'react';
-import { Grid, Typography, Box, Stack } from '@mui/material';
+import { Grid } from '@mui/material';
 import GridItem from './GridItem';
+import { motion } from 'framer-motion';
 
 const repos = [
   {
@@ -45,20 +46,34 @@ const repos = [
 ];
 
 const Projects = () => {
+  let delay = 0;
+
   return (
-    <Grid
-      container
-      sx={{
-        width: '80%',
-        padding: '0 1.5rem',
+    <motion.div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
       }}
     >
-      {repos.map((proj) => (
-        <Grid item md={4} sm={6} xs={12} key={proj.title}>
-          <GridItem project={proj} />
-        </Grid>
-      ))}
-    </Grid>
+      <Grid
+        container
+        sx={{
+          width: '80%',
+          padding: '0 1.5rem',
+        }}
+      >
+        {repos
+          .map((proj) => {
+            delay += 0.2;
+            return { ...proj, delay };
+          })
+          .map((proj) => (
+            <Grid item md={4} sm={6} xs={12} key={proj.title}>
+              <GridItem project={proj} />
+            </Grid>
+          ))}
+      </Grid>
+    </motion.div>
   );
 };
 

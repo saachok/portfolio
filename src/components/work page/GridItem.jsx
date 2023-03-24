@@ -1,5 +1,7 @@
 import React from 'react';
 import { Box, Chip, Stack, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
+import { galleryItem } from './animations';
 
 import './styles/GridItem.scss';
 
@@ -21,21 +23,33 @@ const GridItem = ({ project }) => {
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        // backgroundColor: 'lightpink',
         height: '16rem',
-        // borderRadius: '1rem',
       }}
     >
-      <Stack gap={1}>
-        <img className="project-cover" src={project.img} alt="project cover" />
-        <Typography variant="h6">{project.title}</Typography>
-        <Stack direction="row" gap={1}>
-          {getToolsList(project.tools).map((tool) => (
-            <Chip label={tool} key={tool} />
-          ))}
+      <motion.div
+        variants={galleryItem}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.8, delay: project.delay }}
+      >
+        <Stack gap={1}>
+          <img
+            className="project-cover"
+            src={project.img}
+            alt="project cover"
+          />
+          <Typography variant="h6">{project.title}</Typography>
+          <Stack direction="row" gap={1}>
+            {getToolsList(project.tools).map((tool) => (
+              <Chip label={tool} key={tool} />
+            ))}
+          </Stack>
         </Stack>
-      </Stack>
-      {/* <Typography variant="body1">{project.description}</Typography> */}
+        {/* <Typography variant="body1">
+        Description description description description description description
+        description description.
+      </Typography> */}
+      </motion.div>
     </Box>
   );
 };
