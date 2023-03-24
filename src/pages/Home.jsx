@@ -1,12 +1,12 @@
 import React from 'react';
-import { Stack } from '@mui/material';
+import { Stack, Button } from '@mui/material';
 
 import UserDescription from '../components/home page/UserDescription';
-import CustomButton from '../components/UI/CustomButton';
 import { Link } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
 import { img, buttons } from '../components/home page/animations';
+import '../components/home page/styles/Home.scss';
 
 const Home = () => {
   return (
@@ -16,12 +16,7 @@ const Home = () => {
         animate={img.animate}
         transition={img.transition}
       >
-        <img
-          src="./photo-2.jpg"
-          width="350px"
-          alt="user"
-          style={{ borderRadius: '4px' }}
-        />
+        <img src="./photo-2.jpg" alt="user" className="user-photo" />
       </motion.div>
       <Stack direction="column" gap={1}>
         <UserDescription />
@@ -31,11 +26,8 @@ const Home = () => {
           transition={buttons.transition}
         >
           <Stack direction="row" gap={2} marginTop="1rem">
-            <Link
-              to="/contact"
-              style={{ textDecoration: 'none', color: 'inherit' }}
-            >
-              <CustomButton
+            <Link to="/contact" className="link">
+              <Button
                 sx={{
                   backgroundColor: 'rgb(132,168,192)',
                   color: 'white',
@@ -45,16 +37,13 @@ const Home = () => {
                 }}
               >
                 Contact me
-              </CustomButton>
+              </Button>
             </Link>
-            <Link
-              to="/work"
-              style={{ textDecoration: 'none', color: 'inherit' }}
-            >
-              <CustomButton
+            <Link to="/work" className="link">
+              <Button
                 sx={{
                   backgroundColor: 'inherit',
-                  border: '1px solid darkgreen',
+                  border: '1px solid black',
                   color: 'black',
                   '&:hover': {
                     backgroundColor: 'rgb(193, 207, 220)',
@@ -62,7 +51,7 @@ const Home = () => {
                 }}
               >
                 Check my work
-              </CustomButton>
+              </Button>
             </Link>
           </Stack>
         </motion.div>

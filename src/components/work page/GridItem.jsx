@@ -19,13 +19,7 @@ const GridItem = ({ project }) => {
   };
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        height: '16rem',
-      }}
-    >
+    <Box className="container">
       <motion.div
         variants={galleryItem}
         initial="hidden"

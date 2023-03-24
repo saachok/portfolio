@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid } from '@mui/material';
 import GridItem from './GridItem';
 import { motion } from 'framer-motion';
+import './styles/Projects.scss';
 
 const repos = [
   {
@@ -49,12 +50,7 @@ const Projects = () => {
   let delay = 0;
 
   return (
-    <motion.div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-      }}
-    >
+    <motion.div className="motion-wrapper">
       <Grid
         container
         sx={{

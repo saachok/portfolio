@@ -2,13 +2,9 @@ import React from 'react';
 import { Stack, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { title, firstParagraph, secondParagraph } from './animations';
+import './styles/UserDescription.scss';
 
 const UserDescription = () => {
-  const bgStyles = {
-    backgroundColor: 'rgb(132,168,192)',
-    color: 'white',
-    padding: '0 6px 3px 1px',
-  };
   return (
     <Stack direction="column" gap={1} width="650px">
       <motion.div
@@ -17,8 +13,8 @@ const UserDescription = () => {
         transition={title.transition}
       >
         <Typography variant="h3" fontWeight="bold">
-          Hi, I'm Andrii and I'm <br />a
-          <em style={bgStyles}>Frontend Web Developer</em>.
+          Hi, I'm Andrii and I'm a<br />
+          <em className="styled-bg">Frontend Web Developer</em>.
         </Typography>
       </motion.div>
       <Stack direction="column" gap="inherit" width="560px">
