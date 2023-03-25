@@ -5,6 +5,7 @@ import { theme } from './theme';
 
 import Home from './pages/Home';
 import Work from './pages/Work';
+import Resume from './pages/Resume';
 
 function App() {
   return (
