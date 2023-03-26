@@ -7,33 +7,40 @@ import './Navigation.scss';
 
 const Navigation = () => {
   return (
-    <>
-      <Stack className="navbar" direction="row" gap={6}>
-        <NavLink to="/home">
-          <HomeIcon className="icon" />
-        </NavLink>
+    <Stack
+      className="navbar"
+      direction="row"
+      gap={{
+        xs: 2,
+        sm: 4,
+        lg: 6,
+      }}
+    >
+      <NavLink to="/home">
+        <HomeIcon className="icon" />
+      </NavLink>
 
-        <Stack alignItems="inherit" direction="row" gap="inherit">
-          <NavLink to="/work" className="link">
-            <Typography variant="h6">Work</Typography>
-          </NavLink>
-          <NavLink to="/resume" className="link">
-            <Typography variant="h6">Resume</Typography>
-          </NavLink>
-          <NavLink to="/contact" className="link">
-            <Typography variant="h6">Contact</Typography>
-          </NavLink>
-        </Stack>
-        <IconButton
-          disableRipple
-          onClick={() => {
-            window.location.href = 'https://github.com/saachok';
-          }}
-        >
-          <GitHubIcon className="icon" />
-        </IconButton>
+      <Stack alignItems="inherit" direction="row" gap="inherit">
+        <NavLink to="/work" className="link">
+          <Typography variant="h6">Work</Typography>
+        </NavLink>
+        <NavLink to="/resume" className="link">
+          <Typography variant="h6">Resume</Typography>
+        </NavLink>
+        <NavLink to="/contact" className="link">
+          <Typography variant="h6">Contact</Typography>
+        </NavLink>
       </Stack>
-    </>
+      <IconButton
+        sx={{ padding: 0 }}
+        disableRipple
+        onClick={() => {
+          window.location.href = 'https://github.com/saachok';
+        }}
+      >
+        <GitHubIcon className="icon" />
+      </IconButton>
+    </Stack>
   );
 };
 

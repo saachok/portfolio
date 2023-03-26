@@ -14,7 +14,10 @@ function App() {
         disableGutters
         maxWidth="true"
         sx={{
-          height: '100vh',
+          height: {
+            xs: 'auto',
+            lg: '100vh',
+          },
         }}
       >
         <Navigation />

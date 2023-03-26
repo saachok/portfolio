@@ -9,7 +9,7 @@ export const theme = createTheme({
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'column',
-          backgroundColor: 'rgb(222, 234, 248)',
+          overflowX: 'hidden',
         },
       },
     },
@@ -24,3 +24,16 @@ export const theme = createTheme({
     },
   },
 });
+
+theme.typography.h3 = {
+  fontSize: '3rem',
+  // '@media (max-width:599px)': {
+  //   fontSize: '1.5rem',
+  // },
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '2.5rem',
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '1.5rem',
+  },
+};

@@ -3,7 +3,7 @@
   align-items: center;
   height: 4rem;
   width: 100%;
-  position: fixed;
+  position: static;
   top: 0;
 
   a.link {
@@ -51,7 +51,34 @@
 }
 
 .icon {
+  margin: 0 0.5rem;
   font-size: 28px;
-  margin: 0 2rem;
   color: black;
 }
+
+@media (min-width: 600px) {
+  .icon {
+    margin: 0 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    position: fixed;
+  }
+  .icon {
+    margin: 0 2rem;
+  }
+}
+
+// Version that correctly works with
+// App.jsx => <Container height={{sm: 100vh}}>
+
+// @media (min-width: 600px) {
+//   .navbar {
+//     position: fixed;
+//   }
+//   .icon {
+//     margin: 0 2rem;
+//   }
+// }

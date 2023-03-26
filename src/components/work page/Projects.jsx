@@ -53,9 +53,9 @@ const Projects = () => {
     <motion.div className="motion-wrapper">
       <Grid
         container
-        sx={{
-          width: '80%',
-          padding: '0 1.5rem',
+        width={{
+          xs: 'auto',
+          md: '80%',
         }}
       >
         {repos
@@ -64,7 +64,7 @@ const Projects = () => {
             return { ...proj, delay };
           })
           .map((proj) => (
-            <Grid item md={4} sm={6} xs={12} key={proj.title}>
+            <Grid item lg={4} sm={6} xs={12} key={proj.title}>
               <GridItem project={proj} />
             </Grid>
           ))}
