@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Box, Chip, Stack, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { galleryItem } from './animations';
@@ -27,11 +28,13 @@ const GridItem = ({ project }) => {
         transition={{ duration: 0.8, delay: project.delay }}
       >
         <Stack gap={1}>
-          <img
-            className="project-cover"
-            src={project.img}
-            alt="project cover"
-          />
+          <NavLink to={project.path}>
+            <img
+              className="project-cover"
+              src={project.img}
+              alt="project cover"
+            />
+          </NavLink>
           <Typography variant="h6">{project.title}</Typography>
           <Stack direction="row" gap={1}>
             {getToolsList(project.tools).map((tool) => (
@@ -39,10 +42,6 @@ const GridItem = ({ project }) => {
             ))}
           </Stack>
         </Stack>
-        {/* <Typography variant="body1">
-        Description description description description description description
-        description description.
-      </Typography> */}
       </motion.div>
     </Box>
   );

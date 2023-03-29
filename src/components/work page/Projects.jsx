@@ -7,6 +7,7 @@ import './styles/Projects.scss';
 const repos = [
   {
     img: './projects images/spotify-playlist-creator.png',
+    path: 'spotify-playlist-creator',
     title: 'Spotify Playlist Creator',
     description:
       'Description description description description description description description description.',
@@ -15,30 +16,35 @@ const repos = [
 
   {
     img: './projects images/react-food-order.png',
+    path: 'food-order-app',
     title: 'React Food Order',
     description: '',
     tools: ['React', 'Redux', 'JavaScript', 'HTML', 'CSS'],
   },
   {
     img: './projects images/russian-losses-tracker.png',
+    path: 'russian-losses-tracker',
     title: 'Russian Losses Tracker',
     description: '',
     tools: ['React', 'Chart.js', 'MUI', 'JavaScript', 'CSS'],
   },
   {
     img: './projects images/breaking-bad-characters.png',
+    path: 'breaking-bad-characters/characters',
     title: 'Breaking Bad Characters',
     description: '',
     tools: ['React', 'Router', 'Motion', 'JavaScript', 'CSS', 'MUI'],
   },
   {
     img: './projects images/calculator.png',
+    path: 'calculator',
     title: 'Calculator',
     description: '',
     tools: ['JavaScript', 'HTML', 'CSS'],
   },
   {
     img: './projects images/weather-tracker.png',
+    path: 'weather-tracker',
     title: 'Weather Tracker',
     description: '',
     tools: ['JavaScript', 'HTML', 'CSS'],
