@@ -6,9 +6,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import './Navigation.scss';
 
 const Navigation = () => {
+  const resume_page_url = 'http://localhost:3000/resume';
+  console.log(window.location.href);
   return (
     <Stack
-      className="navbar"
+      className={`navbar${
+        window.location.href === resume_page_url ? ' resume' : ''
+      }`}
       direction="row"
       gap={{
         xs: 2,

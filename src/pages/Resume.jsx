@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
 import samplePDF from '../Resume.pdf';
+import { Container } from '@mui/material';
 
 import Navigation from '../components/Navigation';
-import PageWrapper from '../components/UI/PageWrapper';
 
 const Resume = () => {
   const [numPages, setNumPages] = useState(null);
@@ -14,12 +15,12 @@ const Resume = () => {
   }
 
   return (
-    <PageWrapper>
+    <Container disableGutters maxWidth="true">
       <Navigation />
       <Document file={samplePDF} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={1} />
+        <Page pageNumber={pageNumber} />
       </Document>
-    </PageWrapper>
+    </Container>
   );
 };
 
