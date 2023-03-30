@@ -8,9 +8,11 @@ import Projects from '../components/work page/Projects';
 import WorkPageTitle from '../components/work page/WorkPageTitle';
 
 import { Route, Routes } from 'react-router-dom';
-import BreakingBadCharacters from './BreakingBadCharacters';
-import FoodOrderApp from './FoodOrderApp';
-import RussianLossesTracker from './RussianLossesTracker';
+import BreakingBadCharacters from './apps/BreakingBadCharacters';
+import FoodOrderApp from './apps/FoodOrderApp';
+import RussianLossesTracker from './apps/RussianLossesTracker';
+import Calculator from './apps/Calculator';
+import WeatherTracker from './apps/WeatherTracker';
 
 const WorkPage = () => {
   return (
@@ -38,8 +40,8 @@ const Work = () => {
         path="/breaking-bad-characters/*"
         element={<BreakingBadCharacters />}
       />
-      <Route path="/calculator" element={<h1>Calculator page</h1>} />
-      <Route path="/weather-tracker" element={<h1>Weather tracker page</h1>} />
+      <Route path="/calculator" element={<Calculator />} />
+      <Route path="/weather-tracker" element={<WeatherTracker />} />
     </Routes>
   );
 };
