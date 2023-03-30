@@ -14,6 +14,7 @@ function App() {
         <Route path="/" exact element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/work/*" element={<Work />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
     </ThemeProvider>
   );
