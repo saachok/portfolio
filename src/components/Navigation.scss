@@ -54,6 +54,10 @@
   position: static;
 }
 
+.contact {
+  position: fixed;
+}
+
 .icon {
   margin: 0 0.5rem;
   font-size: 28px;
@@ -73,6 +77,10 @@
 
   .resume {
     position: static;
+  }
+
+  .contact {
+    position: fixed;
   }
 
   .icon {
