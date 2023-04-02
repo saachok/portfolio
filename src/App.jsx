@@ -6,6 +6,7 @@ import { theme } from './theme';
 import Home from './pages/Home';
 import Work from './pages/Work';
 import Resume from './pages/Resume';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/work/*" element={<Work />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </ThemeProvider>
   );
