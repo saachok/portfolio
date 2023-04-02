@@ -27,7 +27,7 @@
     "scss": "^0.2.4",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://saachok.github.io/",
+  "homepage": "http://saachok.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
