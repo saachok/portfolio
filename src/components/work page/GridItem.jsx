@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Box, Chip, Stack, Typography } from '@mui/material';
+import { Box, Chip, Stack, Typography, Link } from '@mui/material';
 import { motion } from 'framer-motion';
 import { galleryItem } from './animations';
 
@@ -28,13 +28,23 @@ const GridItem = ({ project }) => {
         transition={{ duration: 0.8, delay: project.delay }}
       >
         <Stack gap={1}>
-          <NavLink to={project.path}>
-            <img
-              className="project-cover"
-              src={project.img}
-              alt="project cover"
-            />
-          </NavLink>
+          {project.path === 'spotify-playlist-creator' ? (
+            <Link href="https://playlist-creator-spotify.herokuapp.com/">
+              <img
+                className="project-cover"
+                src={project.img}
+                alt="project cover"
+              />
+            </Link>
+          ) : (
+            <NavLink to={project.path}>
+              <img
+                className="project-cover"
+                src={project.img}
+                alt="project cover"
+              />
+            </NavLink>
+          )}
           <Typography variant="h6">{project.title}</Typography>
           <Stack direction="row" gap={1}>
             {getToolsList(project.tools).map((tool) => (
