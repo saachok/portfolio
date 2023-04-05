@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import '../../projects/weather-project/styles.css';
 const api = '0f439455f87b7694c081f3e1754f42a0';
 const cities = [
@@ -108,18 +108,18 @@ const cities = [
 ];
 
 const WeatherTracker = () => {
-  const iconImg = document.getElementById('weather-icon');
-  const loc = document.querySelector('#location');
-  const tempC = document.querySelector('.c');
-  const tempF = document.querySelector('.f');
-  const desc = document.querySelector('.desc');
-  const sunriseDOM = document.querySelector('.sunrise');
-  const sunsetDOM = document.querySelector('.sunset');
-  const container = document.querySelector('.body-container');
+  const iconImg = useRef(null);
+  const loc = useRef(null);
+  const tempC = useRef(null);
+  const tempF = useRef(null);
+  const desc = useRef(null);
+  const sunriseDOM = useRef(null);
+  const sunsetDOM = useRef(null);
+  const container = useRef(null);
 
   function showCity(evt, CityName) {
     // Declare all variables
-    var i, tabcontent, tablinks;
+    var i, tablinks;
 
     // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName('tablinks');
@@ -128,7 +128,6 @@ const WeatherTracker = () => {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    // document.getElementById(CityName).style.display = "block";
     evt.currentTarget.className += ' active';
     showWeather(CityName);
   }
@@ -144,16 +143,14 @@ const WeatherTracker = () => {
     backgroundImage,
   }) => {
     // Interacting with DOM to show data
-
-    iconImg.src = iconUrl;
-    loc.textContent = `${place}`;
-    desc.textContent = `${description}`;
-    tempC.textContent = `${temp.toFixed(2)} °C`;
-    tempF.textContent = `${fahrenheit.toFixed(2)} °F`;
-    sunriseDOM.textContent = `${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}`;
-    sunsetDOM.textContent = `${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}`;
-
-    container.style.backgroundImage = `url(${backgroundImage})`;
+    iconImg.current.src = iconUrl;
+    loc.current.textContent = `${place}`;
+    desc.current.textContent = `${description}`;
+    tempC.current.textContent = `${temp.toFixed(2)} °C`;
+    tempF.current.textContent = `${fahrenheit.toFixed(2)} °F`;
+    sunriseDOM.current.textContent = `${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}`;
+    sunsetDOM.current.textContent = `${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}`;
+    container.current.style.backgroundImage = `url(${backgroundImage})`;
   };
 
   const convertToFahrenheit = (temp) => {
@@ -172,7 +169,7 @@ const WeatherTracker = () => {
   const getWeatherURL = (cityName) => {
     const cityConfig = cities.find((element) => {
       return element.name === cityName;
-    }); // 1
+    });
     return `https://api.openweathermap.org/data/2.5/weather?lat=${cityConfig.lat}&lon=${cityConfig.long}&appid=${api}&units=metric`;
   };
 
@@ -209,25 +206,21 @@ const WeatherTracker = () => {
 
   const showWeather = async (city) => {
     const cityConfig = await prepareCityConfig(city);
-    // setTimeout(updateHTMLWeatherInfo, 500, cityConfig);
     updateHTMLWeatherInfo(cityConfig);
   };
 
   const showStartScreen = () => {
-    // console.log('start screen');
     showWeather('Lviv');
   };
 
-  // FIXME: Cannot set a null value into img.src prop at the first time page load
   useEffect(() => {
-    console.log('func triggered');
     showStartScreen();
   }, []);
 
   // window.addEventListener('load', showStartScreen);
 
   return (
-    <div className="body-container">
+    <div ref={container} className="body-container">
       <div className="weather-container">
         <nav className="tab">
           <button
@@ -352,20 +345,34 @@ const WeatherTracker = () => {
           </button>
         </nav>
         <div className="containerContent">
-          <img src="" alt="" srcSet="" id="weather-icon" />
-          <div id="location">Unable to Fetch Weather</div>
-          <div className="desc">No Information Available.</div>
+          <img ref={iconImg} src="" alt="" srcSet="" id="weather-icon" />
+          <div ref={loc} id="location">
+            Unable to Fetch Weather
+          </div>
+          <div ref={desc} className="desc">
+            No Information Available.
+          </div>
           <div className="weather">
-            <div className="c">Error</div>
+            <div ref={tempC} className="c">
+              Error
+            </div>
             <div className="circle"></div>
-            <div className="f">Error</div>
+            <div ref={tempF} className="f">
+              Error
+            </div>
           </div>
           <div className="info">
             <h4>
-              Sunrise: <span className="sunrise">No Information Available</span>
+              Sunrise:{' '}
+              <span className="sunrise" ref={sunriseDOM}>
+                No Information Available
+              </span>
             </h4>
             <h4>
-              Sunset: <span className="sunset">No Information Available</span>
+              Sunset:{' '}
+              <span className="sunset" ref={sunsetDOM}>
+                No Information Available
+              </span>
             </h4>
           </div>
         </div>
