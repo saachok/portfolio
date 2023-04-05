@@ -6,7 +6,7 @@ import { Container } from '@mui/material';
 import Navigation from '../components/Navigation';
 
 const Resume = () => {
-  const PDF_PATH = process.env.PUBLIC_URL + '/Resume.pdf';
+  const PDF_PATH = './Resume.pdf';
   return (
     <Container disableGutters maxWidth="true">
       <Navigation />
