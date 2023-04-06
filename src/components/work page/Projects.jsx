@@ -49,7 +49,6 @@ const repos = [
     description: '',
     tools: ['JavaScript', 'HTML', 'CSS'],
   },
-  // 'dnu-example',
 ];
 
 const Projects = () => {

@@ -8,7 +8,6 @@ import './Navigation.scss';
 const Navigation = () => {
   const resume_page_url = 'http://localhost:3000/resume';
   const contact_page_url = 'http://localhost:3000/contact';
-  console.log(window.location.href);
   return (
     <Stack
       className={`navbar${

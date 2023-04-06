@@ -26,7 +26,7 @@ const UserDescription = () => {
       >
         <Typography variant="h3" fontWeight="bold">
           Hi, I'm Andrii and I'm a<br />
-          <em className="styled-bg">Frontend Web Developer</em>.
+          <em className="styled-bg">Frontend Web Developer</em>
         </Typography>
       </motion.div>
       <Stack
