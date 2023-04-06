@@ -1,6 +1,6 @@
 export const wrapper = {
-  initial: { y: -50, opacity: 0 },
-  animate: { y: 0, opacity: 1 },
+  initial: { y: -50, opacity: 0, scaleY: 0 },
+  animate: { y: 0, opacity: 1, scaleY: 1 },
   transition: { duration: 0.5 },
 };
 
