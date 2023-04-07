@@ -29,8 +29,8 @@ const Navigation = () => {
       </NavLink>
 
       <Stack alignItems="inherit" direction="row" gap="inherit">
-        <NavLink to="/work" className="link">
-          <Typography variant="h6">Work</Typography>
+        <NavLink to="/projects" className="link">
+          <Typography variant="h6">Projects</Typography>
         </NavLink>
         <NavLink to="/resume" className="link">
           <Typography variant="h6">Resume</Typography>

@@ -3,7 +3,7 @@ import { Stack, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { title } from './animations';
 
-const WorkPageTitle = () => {
+const ProjectsPageTitle = () => {
   return (
     <motion.div
       variants={title}
@@ -12,7 +12,7 @@ const WorkPageTitle = () => {
       transition={{ duration: 0.8 }}
     >
       <Stack direction="column" alignItems="center">
-        <Typography variant="h3">Work</Typography>
+        <Typography variant="h3">Projects</Typography>
         <Typography variant="body1" textAlign="center">
           Check list of my non commercial projects.
         </Typography>
@@ -21,4 +21,4 @@ const WorkPageTitle = () => {
   );
 };
 
-export default WorkPageTitle;
+export default ProjectsPageTitle;

@@ -7,18 +7,6 @@ import { galleryItem } from './animations';
 import './styles/GridItem.scss';
 
 const GridItem = ({ project }) => {
-  const getToolsList = (arr) => {
-    const cuttedToolsList = [];
-    for (let i = 0; i <= 2; i++) {
-      cuttedToolsList.push(arr[i]);
-    }
-    const otherTools = `+${arr.length - cuttedToolsList.length}`;
-    if (otherTools !== '+0') {
-      cuttedToolsList.push(otherTools);
-    }
-    return cuttedToolsList;
-  };
-
   return (
     <Box className="container">
       <motion.div
@@ -46,8 +34,12 @@ const GridItem = ({ project }) => {
             </NavLink>
           )}
           <Typography variant="h6">{project.title}</Typography>
-          <Stack direction="row" gap={1}>
-            {getToolsList(project.tools).map((tool) => (
+          <Stack
+            direction="row"
+            sx={{ maxWidth: '285px', flexWrap: 'wrap' }}
+            gap={1}
+          >
+            {project.tools.map((tool) => (
               <Chip label={tool} key={tool} />
             ))}
           </Stack>

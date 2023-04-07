@@ -51,7 +51,7 @@ const repos = [
   },
 ];
 
-const Projects = () => {
+const ProjectsList = () => {
   let delay = 0;
 
   return (
@@ -78,4 +78,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsList;

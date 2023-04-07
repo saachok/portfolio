@@ -88,7 +88,7 @@ const Home = () => {
                   Contact me
                 </Button>
               </Link>
-              <Link to="/work" className="link">
+              <Link to="/projects" className="link">
                 <Button
                   sx={{
                     backgroundColor: 'inherit',
@@ -103,7 +103,7 @@ const Home = () => {
                     },
                   }}
                 >
-                  Check my work
+                  Check my projects
                 </Button>
               </Link>
             </Stack>

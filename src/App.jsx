@@ -4,7 +4,7 @@ import { ThemeProvider } from '@mui/material';
 import { theme } from './theme';
 
 import Home from './pages/Home';
-import Work from './pages/Work';
+import Projects from './pages/Projects';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/work/*" element={<Work />} />
+        <Route path="/projects/*" element={<Projects />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

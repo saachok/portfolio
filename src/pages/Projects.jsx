@@ -4,8 +4,8 @@ import { Stack } from '@mui/material';
 import Navigation from '../components/Navigation';
 import PageWrapper from '../components/UI/PageWrapper';
 
-import Projects from '../components/work page/Projects';
-import WorkPageTitle from '../components/work page/WorkPageTitle';
+import ProjectsList from '../components/work page/ProjectsList';
+import ProjectsPageTitle from '../components/work page/ProjectsPageTitle';
 
 import { Route, Routes } from 'react-router-dom';
 import BreakingBadCharacters from './apps/BreakingBadCharacters';
@@ -14,23 +14,23 @@ import RussianLossesTracker from './apps/RussianLossesTracker';
 import Calculator from './apps/Calculator';
 import WeatherTracker from './apps/WeatherTracker';
 
-const WorkPage = () => {
+const ProjectsPage = () => {
   return (
     <PageWrapper>
       <Navigation />
       <Stack direction="column" gap={2} alignItems="center">
-        <WorkPageTitle />
-        <Projects />
+        <ProjectsPageTitle />
+        <ProjectsList />
       </Stack>
     </PageWrapper>
   );
 };
 
-const Work = () => {
+const Projects = () => {
   return (
     // +1 route for Spotify Playlist Creator that hosted on Heroku
     <Routes>
-      <Route path="/" exact element={<WorkPage />} />
+      <Route path="/" exact element={<ProjectsPage />} />
       <Route path="/food-order-app" element={<FoodOrderApp />} />
       <Route
         path="/russian-losses-tracker"
@@ -46,4 +46,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;
