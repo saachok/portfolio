@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.1d151966.css",
-    "main.js": "/portfolio/static/js/main.b2973d35.js",
+    "main.css": "/portfolio/static/css/main.7fc33af7.css",
+    "main.js": "/portfolio/static/js/main.52a35f9f.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/js/pdf.worker.entry.cee8da8d.worker.js": "/portfolio/static/js/pdf.worker.entry.cee8da8d.worker.js",
+    "pdf.worker.js": "/portfolio/59006f2786abed689b53f566b473d6da.js",
     "static/media/meals.jpg": "/portfolio/static/media/meals.2971f633fc1382581cbf.jpg",
-    "static/media/CV_Andrii_Sachok.pdf": "/portfolio/static/media/CV_Andrii_Sachok.f3e0d7288e889e40c74e.pdf",
+    "static/media/Resume.pdf": "/portfolio/static/media/Resume.f3e0d7288e889e40c74e.pdf",
     "index.html": "/portfolio/index.html",
-    "main.1d151966.css.map": "/portfolio/static/css/main.1d151966.css.map",
-    "main.b2973d35.js.map": "/portfolio/static/js/main.b2973d35.js.map",
+    "main.7fc33af7.css.map": "/portfolio/static/css/main.7fc33af7.css.map",
+    "main.52a35f9f.js.map": "/portfolio/static/js/main.52a35f9f.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d151966.css",
-    "static/js/main.b2973d35.js"
+    "static/css/main.7fc33af7.css",
+    "static/js/main.52a35f9f.js"
   ]
 }
