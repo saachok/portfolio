@@ -17,7 +17,7 @@ const GridItem = ({ project }) => {
       >
         <Stack gap={1}>
           {project.path === 'spotify-playlist-creator' ? (
-            <Link href="https://playlist-creator-spotify.herokuapp.com/">
+            <Link href="https://spotify-playlist-creator.onrender.com/">
               <img
                 className="project-cover"
                 src={project.img}
