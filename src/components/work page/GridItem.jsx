@@ -15,7 +15,7 @@ const GridItem = ({ project }) => {
         animate="visible"
         transition={{ duration: 0.8, delay: project.delay }}
       >
-        <Stack gap={1}>
+        <Stack gap={1} sx={{ maxWidth: '285px' }}>
           {project.path === 'spotify-playlist-creator' ? (
             <Link href="https://spotify-playlist-creator.onrender.com/">
               <img
@@ -34,6 +34,7 @@ const GridItem = ({ project }) => {
             </NavLink>
           )}
           <Typography variant="h6">{project.title}</Typography>
+          <Typography>{project.description}</Typography>
           <Stack
             direction="row"
             sx={{ maxWidth: '285px', flexWrap: 'wrap' }}
