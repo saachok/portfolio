@@ -8,6 +8,7 @@ import './Navigation.scss';
 const Navigation = () => {
   const resume_page_url = 'https://saachok.github.io/portfolio/#/resume';
   const contact_page_url = 'https://saachok.github.io/portfolio/#/contact';
+  const projects_page_url = 'https://saachok.github.io/portfolio/#/projects';
   return (
     <Stack
       className={`navbar${
@@ -15,6 +16,8 @@ const Navigation = () => {
           ? ' resume'
           : window.location.href === contact_page_url
           ? ' contact'
+          : window.location.href === projects_page_url
+          ? ' projects'
           : ''
       }`}
       direction="row"
