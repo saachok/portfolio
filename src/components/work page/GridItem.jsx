@@ -7,40 +7,35 @@ import { galleryItem } from './animations';
 import './styles/GridItem.scss';
 
 const GridItem = ({ project }) => {
+  const { img, path, title, description, tools, href, external, delay } =
+    project;
+
   return (
     <Box className="container">
       <motion.div
         variants={galleryItem}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 0.8, delay: project.delay }}
+        transition={{ duration: 0.8, delay: delay }}
       >
         <Stack gap={1} sx={{ maxWidth: '285px' }}>
-          {project.path === 'spotify-playlist-creator' ? (
-            <Link href="https://spotify-playlist-creator.onrender.com/">
-              <img
-                className="project-cover"
-                src={project.img}
-                alt="project cover"
-              />
+          {external ? (
+            <Link href={href}>
+              <img className="project-cover" src={img} alt="project cover" />
             </Link>
           ) : (
-            <NavLink to={project.path}>
-              <img
-                className="project-cover"
-                src={project.img}
-                alt="project cover"
-              />
+            <NavLink to={path}>
+              <img className="project-cover" src={img} alt="project cover" />
             </NavLink>
           )}
-          <Typography variant="h6">{project.title}</Typography>
-          <Typography>{project.description}</Typography>
+          <Typography variant="h6">{title}</Typography>
+          <Typography>{description}</Typography>
           <Stack
             direction="row"
             sx={{ maxWidth: '285px', flexWrap: 'wrap' }}
             gap={1}
           >
-            {project.tools.map((tool) => (
+            {tools.map(tool => (
               <Chip label={tool} key={tool} />
             ))}
           </Stack>
