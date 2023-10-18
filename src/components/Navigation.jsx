@@ -6,15 +6,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import './Navigation.scss';
 
 const Navigation = () => {
-<<<<<<< HEAD
-  const resume_page_url = 'https://saachok.github.io/portfolio/#/resume';
-  const contact_page_url = 'https://saachok.github.io/portfolio/#/contact';
-  const projects_page_url = 'https://saachok.github.io/portfolio/#/projects';
-=======
+  // const resume_page_url = 'https://saachok.github.io/portfolio/#/resume';
+  // const contact_page_url = 'https://saachok.github.io/portfolio/#/contact';
+  // const projects_page_url = 'https://saachok.github.io/portfolio/#/projects';
   const resume_page_url = 'http://localhost:3000/resume';
   const contact_page_url = 'http://localhost:3000/contact';
   const projects_page_url = 'http://localhost:3000/projects';
->>>>>>> main
   return (
     <Stack
       className={`navbar${
